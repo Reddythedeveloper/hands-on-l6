@@ -42,9 +42,83 @@ The analysis relies on two primary datasets:
 This pipeline performs four distinct analytical tasks, outputting the resulting DataFrames directly to the console:
 
 1. **Task 1: User Favorite Genres** - Calculates the total play count per genre for each user and identifies their #1 most-played genre.
+========================================
+Task 1: User Favorite Genres
+========================================
++--------+--------------+------------+
+|user_id |favorite_genre|listen_count|
++--------+--------------+------------+
+|user_1  |Pop           |4           |
+|user_10 |Classical     |3           |
+|user_100|Rock          |3           |
+|user_11 |Hip-Hop       |4           |
+|user_12 |Jazz          |8           |
+|user_13 |Rock          |4           |
+|user_14 |Jazz          |4           |
+|user_15 |Classical     |3           |
+|user_16 |Hip-Hop       |4           |
+|user_17 |Classical     |4           |
++--------+--------------+------------+
+only showing top 10 rows
+
 2. **Task 2: Average Listen Time** - Aggregates the total listening duration per user and calculates their average listen time per track in seconds.
+========================================
+Task 2: Average Listen Time
+========================================
++-------+-------------------+
+|user_id|avg_listen_time_sec|
++-------+-------------------+
+|user_58|205.45             |
+|user_94|178.25             |
+|user_73|146.4              |
+|user_85|209.92             |
+|user_14|133.08             |
+|user_56|202.38             |
+|user_22|149.45             |
+|user_68|161.0              |
+|user_86|168.58             |
+|user_97|139.13             |
++-------+-------------------+
+only showing top 10 rows
+
 3. **Task 3: Genre Loyalty Scores** - Calculates a custom metric (time spent on a specific genre divided by the total time spent listening) and ranks the global top 10 highest loyalty scores.
+========================================
+Task 3: Top 10 Genre Loyalty Scores
+========================================
++-------+---------+-------------+
+|user_id|genre    |loyalty_score|
++-------+---------+-------------+
+|user_75|Jazz     |0.8671       |
+|user_39|Hip-Hop  |0.8281       |
+|user_28|Classical|0.7387       |
+|user_68|Classical|0.7275       |
+|user_30|Classical|0.6917       |
+|user_96|Classical|0.6734       |
+|user_74|Rock     |0.5857       |
+|user_45|Jazz     |0.5856       |
+|user_4 |Classical|0.5809       |
+|user_88|Hip-Hop  |0.5797       |
++-------+---------+-------------+
+
 4. **Task 4: Late Night Listeners** - Filters the dataset to identify users who actively stream music between 12:00 AM and 5:00 AM.
+========================================
+Task 4: Late Night Listeners
+========================================
++-------+---------------------+
+|user_id|late_night_play_count|
++-------+---------------------+
+|user_58|3                    |
+|user_94|6                    |
+|user_14|2                    |
+|user_56|5                    |
+|user_22|4                    |
+|user_68|1                    |
+|user_86|3                    |
+|user_97|5                    |
+|user_65|6                    |
+|user_47|2                    |
++-------+---------------------+
+only showing top 10 rows
 
 ## Prerequisites
 
