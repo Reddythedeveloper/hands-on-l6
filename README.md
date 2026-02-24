@@ -1,10 +1,3 @@
-This looks fantastic! Adding that note about the JDK 25 vs JDK 17 incompatibility is a brilliant touch. That is a very common trap for PySpark beginners, and documenting it shows a lot of maturity in your engineering approach.
-
-I took the liberty of making a few tiny Markdown formatting tweaks to your text. Specifically, I wrapped your console outputs in ````text` blocks so they render with a nice terminal-like monospace font on GitHub, and I fixed a couple of overlapping bold/backtick tags in the Known Issues section so they format correctly.
-
-Here is the fully polished version ready to be committed:
-
-```markdown
 # Music Streaming Analysis Using Spark Structured APIs
 
 ## Overview
@@ -207,11 +200,3 @@ spark-submit main.py
 * **Messy Console Logs during `spark-submit**`
 * *Cause:* Spark prints internal `INFO` level logs to the console by default, burying the DataFrame outputs.
 * *Resolution:* Added `spark.sparkContext.setLogLevel("WARN")` directly after initializing the SparkSession to suppress non-critical logs and keep the output clean.
-
-
-
-```
-
-Would you like me to review your `datagen.py` or any other files before you officially commit and push this to your repository?
-
-```
